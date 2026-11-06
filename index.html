@@ -1,1 +1,221 @@
+<!DOCTYPE html> 
 
+<html lang="es"> 
+
+<head> 
+
+  <meta charset="UTF-8" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+  <title>Consejería Académica - Terapia Ocupacional</title> 
+
+  <link rel="stylesheet" href="style.css" /> 
+
+</head> 
+
+ 
+
+<body> 
+
+  <header class="hero"> 
+
+    <div class="hero__inner"> 
+
+      <h1>Consejería Académica </h1> 
+
+      <p>Terapia Ocupacional · apuntes, modelos, malla interactiva y calculadora de notas.</p> 
+
+ 
+
+      <div class="btn-row"> 
+
+        <a class="btn btn--primary" href="https://uccl0-my.sharepoint.com/:f:/r/personal/cdac_estudiante_uc_cl/Documents/Central%20de%20marcos,%20modelos%20y%20pautas?d=w1d04fc19f2824980b499e361f3efe0be&csf=1&web=1&e=bL74G1" target="_blank" rel="noopener"> 
+
+          Central de Modelos 🧠 
+
+        </a> 
+
+ 
+
+        <a class="btn btn--secondary" href="https://uccl0-my.sharepoint.com/:f:/g/personal/cceeto_uc_cl/IgCikOzFe6znTZjwbYmJFiPQAdYIYW39eXJEAeoPLm_MmVQ?e=EdCZSd" target="_blank" rel="noopener"> 
+
+          Central de Apuntes 📚 
+
+        </a> 
+
+      </div> 
+
+    </div> 
+
+  </header> 
+
+ 
+
+  <main class="container"> 
+
+    <!-- Malla --> 
+
+    <section class="card"> 
+
+      <div class="card__header"> 
+
+        <h2>🗺️ Malla Curricular (Interactiva por prerrequisitos)</h2> 
+
+        <p class="muted">Marca ramos aprobados. Los siguientes se habilitan automáticamente.</p> 
+
+      </div> 
+
+ 
+
+      <div class="progress"> 
+
+        <div class="progress__bar"> 
+
+          <div id="progressFill" class="progress__fill" style="width:0%"></div> 
+
+        </div> 
+
+        <div class="progress__meta"> 
+
+          <span id="progressText">0% · 0/0 ramos</span> 
+
+          <button id="resetBtn" class="btn btn--ghost" type="button">Reiniciar</button> 
+
+        </div> 
+
+      </div> 
+
+ 
+
+      <div id="curriculum" class="curriculum"></div> 
+
+ 
+
+      <p class="note"> 
+
+        🔒 Si un ramo está bloqueado, es porque faltan prerrequisitos (se muestran abajo). 
+
+      </p> 
+
+    </section> 
+
+ 
+
+    <!-- Calculadora --> 
+
+    <section class="card"> 
+
+      <div class="card__header"> 
+
+        <h2>🧮 Calculadora de Notas (escala 1 a 7.0)</h2> 
+
+        <p class="muted">Calcula promedio y estima nota necesaria con evaluaciones restantes.</p> 
+
+      </div> 
+
+ 
+
+      <form id="gradesForm" class="form" onsubmit="return false;"> 
+
+        <div class="form__grid"> 
+
+          <div class="field"> 
+
+            <label for="gradeCount">Cantidad de evaluaciones (ya rendidas)</label> 
+
+            <input id="gradeCount" type="number" min="1" max="20" value="3" /> 
+
+            <small>Ej: 3 controles, 4 pruebas, etc.</small> 
+
+          </div> 
+
+ 
+
+          <div class="field"> 
+
+            <label for="weights">¿Usas ponderación?</label> 
+
+            <select id="weights"> 
+
+              <option value="no" selected>Sin ponderación (promedio simple)</option> 
+
+              <option value="yes">Con ponderación</option> 
+
+            </select> 
+
+            <small>Si eliges ponderación, ingresa los pesos por evaluación.</small> 
+
+          </div> 
+
+        </div> 
+
+ 
+
+        <div class="divider"></div> 
+
+ 
+
+        <div id="inputsContainer" class="grades-grid"></div> 
+
+ 
+
+        <div class="divider"></div> 
+
+ 
+
+        <div class="form__grid"> 
+
+          <div class="field"> 
+
+            <label for="target">Nota objetivo (opcional)</label> 
+
+            <input id="target" type="number" min="1" max="7" step="0.1" placeholder="Ej: 5.0" /> 
+
+          </div> 
+
+ 
+
+          <div class="field"> 
+
+            <label for="remaining">Evaluaciones restantes (opcional)</label> 
+
+            <input id="remaining" type="number" min="0" max="20" value="0" step="1" /> 
+
+          </div> 
+
+        </div> 
+
+ 
+
+        <div class="btn-row btn-row--end"> 
+
+          <button type="button" id="calcBtn" class="btn btn--primary">Calcular ✨</button> 
+
+        </div> 
+
+ 
+
+        <div id="result" class="result" aria-live="polite"></div> 
+
+      </form> 
+
+    </section> 
+
+  </main> 
+
+ 
+
+  <footer class="footer"> 
+
+    <p> Consejería Académica · Terapia Ocupacional</p> 
+
+  </footer> 
+
+ 
+
+  <script src="script.js"></script> 
+
+</body> 
+
+</html>
