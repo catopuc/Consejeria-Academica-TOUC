@@ -599,3 +599,75 @@ loadState();
 buildInputs(); 
 
 renderCurriculum(); 
+
+/* Sección de consultas */
+
+.consultas {
+
+text-align: center;
+
+padding: 50px 20px;
+
+margin-top: 40px;
+
+background: linear-gradient(135deg, #8e6bbf, #d98bb5, #79a9d8);
+
+border-radius: 25px;
+
+color: white;
+
+}
+
+
+.consultas h2 {
+
+margin-bottom: 22px;
+
+font-size: 28px;
+
+}
+
+
+.btn-consultas {
+
+background: rgba(255, 255, 255, 0.95);
+
+color: #76559f;
+
+border: none;
+
+padding: 14px 30px;
+
+border-radius: 30px;
+
+font-size: 16px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition: all 0.3s ease;
+
+box-shadow: 0 4px 12px rgba(80, 50, 120, 0.2);
+
+}
+
+
+.btn-consultas:hover {
+
+transform: translateY(-3px);
+
+box-shadow: 0 7px 18px rgba(80, 50, 120, 0.3);
+
+}
+
+
+.correo-consultas {
+
+margin-top: 20px;
+
+font-size: 15px;
+
+color: white;
+
+}
