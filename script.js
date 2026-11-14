@@ -600,16 +600,11 @@ buildInputs();
 
 renderCurriculum(); 
 
-// Botón de formulario de consultas
-
-document.getElementById("btnConsultas").addEventListener("click", function () {
-
-window.open(
-
-"https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.cloud.microsoft%2FPages%2FResponsePage.aspx%3Fid%3D-tn1Xz_4wUqk0utI6goA0oyxOGhF_NRLvYzknqWqZ7JUMVc0MUZRTkpYMEpBRlNKTk5CR1ZQSkJXUy4u&data=05%7C02%7Ccdac%40estudiante.uc.cl%7Cce9fb3a7371f47f2b5c608df42713400%7C5ff5d9faf83f4ac1a4d2eb48ea0a00d2%7C0%7C0%7C639302726100098359%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=nhzIyG3KzVbOWEOatINB8myk9DgqFOWA0G51ei%2BRzlI%3D&reserved=0u",
-
-"_blank"
-
-);
-
+document.addEventListener("DOMContentLoaded", function () {
+   const boton = document.getElementById("btnConsultas");
+   
+    boton.addEventListener("click", function () { 
+       window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=-tn1Xz_4wUqk0utI6goA0oyxOGhF_NRLvYzknqWqZ7JUMVc0MUZRTkpYMEpBRlNKTk5CR1ZQSkJXUy4u"; 
+    }); 
 });
+
