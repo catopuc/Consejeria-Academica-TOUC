@@ -600,74 +600,16 @@ buildInputs();
 
 renderCurriculum(); 
 
-/* Sección de consultas */
+// Botón de formulario de consultas
 
-.consultas {
+document.getElementById("btnConsultas").addEventListener("click", function () {
 
-text-align: center;
+window.open(
 
-padding: 50px 20px;
+"https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.cloud.microsoft%2FPages%2FResponsePage.aspx%3Fid%3D-tn1Xz_4wUqk0utI6goA0oyxOGhF_NRLvYzknqWqZ7JUMVc0MUZRTkpYMEpBRlNKTk5CR1ZQSkJXUy4u&data=05%7C02%7Ccdac%40estudiante.uc.cl%7Cce9fb3a7371f47f2b5c608df42713400%7C5ff5d9faf83f4ac1a4d2eb48ea0a00d2%7C0%7C0%7C639302726100098359%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=nhzIyG3KzVbOWEOatINB8myk9DgqFOWA0G51ei%2BRzlI%3D&reserved=0u",
 
-margin-top: 40px;
+"_blank"
 
-background: linear-gradient(135deg, #8e6bbf, #d98bb5, #79a9d8);
+);
 
-border-radius: 25px;
-
-color: white;
-
-}
-
-
-.consultas h2 {
-
-margin-bottom: 22px;
-
-font-size: 28px;
-
-}
-
-
-.btn-consultas {
-
-background: rgba(255, 255, 255, 0.95);
-
-color: #76559f;
-
-border: none;
-
-padding: 14px 30px;
-
-border-radius: 30px;
-
-font-size: 16px;
-
-font-weight: 600;
-
-cursor: pointer;
-
-transition: all 0.3s ease;
-
-box-shadow: 0 4px 12px rgba(80, 50, 120, 0.2);
-
-}
-
-
-.btn-consultas:hover {
-
-transform: translateY(-3px);
-
-box-shadow: 0 7px 18px rgba(80, 50, 120, 0.3);
-
-}
-
-
-.correo-consultas {
-
-margin-top: 20px;
-
-font-size: 15px;
-
-color: white;
-
-}
+});
